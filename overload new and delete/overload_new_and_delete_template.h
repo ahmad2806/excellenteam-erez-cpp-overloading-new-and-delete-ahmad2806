@@ -10,26 +10,24 @@
 template<typename T, unsigned long SIZE>
 class AllocTemplate : public T {
 public:
+
+    AllocTemplate(const T& obj);
+    void *operator new(size_t count);
+    void operator delete(void *ptr);
+
+private:
     static void *s_free_list;
     static unsigned char s_pool[];
     const static int POOL_SIZE = 5;
 
-    AllocTemplate(T t);
-
     static void *init_memory_pool();
-
-    void *operator new(size_t count);
-
-    void operator delete(void *ptr);
-
-private:
     void *operator new[](size_t);
-
     void operator delete[](void *);
 };
 
 template<typename T, unsigned long SIZE>
 unsigned char AllocTemplate<T, SIZE>::s_pool[sizeof(T) * SIZE];
+
 template<typename T, unsigned long SIZE>
 void *AllocTemplate<T, SIZE>::s_free_list = AllocTemplate<T, SIZE>::init_memory_pool();
 
@@ -48,12 +46,12 @@ void *AllocTemplate<T, SIZE>::init_memory_pool() {
 }
 
 template<typename T, unsigned long SIZE>
-void *AllocTemplate<T, SIZE>::operator new(size_t count) {
-    void *free_item = AllocTemplate::s_free_list;
+void *AllocTemplate<T, SIZE>::operator new(size_t size) {
+    void *free_item = s_free_list;
     if (!free_item) {
         throw std::bad_alloc();
     }
-    AllocTemplate::s_free_list = *(void **) s_free_list;
+    s_free_list = *(void **) s_free_list;
     return free_item;
 }
 
@@ -64,10 +62,10 @@ void AllocTemplate<T, SIZE>::operator delete(void *ptr) {
 
 }
 
+//first solution
 template<typename T, unsigned long SIZE>
-AllocTemplate<T, SIZE>::AllocTemplate(T t):T(t) {
+AllocTemplate<T, SIZE>::AllocTemplate(const T &obj): T(obj) {}
 
-}
 
 
 #endif //PERSON_MY_TEMPLATES_H

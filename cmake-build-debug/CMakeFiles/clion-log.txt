@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2018.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\ahmad\Desktop\Excellenteam\c++\week_5_c++\excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806\person
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/cmake-build-debug

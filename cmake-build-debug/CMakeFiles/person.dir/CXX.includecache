@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/person.cpp
+iostream
+-
+stddef.h
+-
+cstring
+C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/cstring
+person.h
+C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/person.h
+
+C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/person.h
+

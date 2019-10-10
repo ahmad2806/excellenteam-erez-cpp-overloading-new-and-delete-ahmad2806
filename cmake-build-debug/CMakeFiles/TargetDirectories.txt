@@ -1,0 +1,3 @@
+C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/cmake-build-debug/CMakeFiles/person.dir
+C:/Users/ahmad/Desktop/Excellenteam/c++/week_5_c++/excellenteam-erez-cpp-overloading-new-and-delete-ahmad2806/person/cmake-build-debug/CMakeFiles/rebuild_cache.dir
